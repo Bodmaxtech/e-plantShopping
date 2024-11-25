@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ProductList.css';
 import CartItem from './CartItem';
 
@@ -210,9 +210,61 @@ function ProductList() {
                     description: "Resilient, thrives in almost any condition.",
                     cost: "$15"
                 }
+            {
+                    name: "Cast Iron Plant",
+                    image: "https://cdn.pixabay.com/photo/2017/02/16/18/04/cast-iron-plant-2072008_1280.jpg",
+                    description: "Hardy plant that tolerates low light and neglect.",
+                    cost: "$20"
+                },
+                {
+                    name: "Succulents",
+                    image: "https://cdn.pixabay.com/photo/2016/11/21/16/05/cacti-1846147_1280.jpg",
+                    description: "Drought-tolerant plants with unique shapes and colors.",
+                    cost: "$18"
+                },
+                {
+                    name: "Aglaonema",
+                    image: "https://cdn.pixabay.com/photo/2014/10/10/04/27/aglaonema-482915_1280.jpg",
+                    description: "Requires minimal care and adds color to indoor spaces.",
+                    cost: "$22"
+                }
             ]
         }
     ];
+   const styleObj={
+    backgroundColor: '#4CAF50',
+    color: '#fff!important',
+    padding: '15px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignIems: 'center',
+    fontSize: '20px',
+   }
+   const styleObjUl={
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '1100px',
+   }
+   const styleA={
+    color: 'white',
+    fontSize: '30px',
+    textDecoration: 'none',
+   }
+   const handleCartClick = (e) => {
+    e.preventDefault();
+    setShowCart(true); // Set showCart to true when cart icon is clicked
+};
+const handlePlantsClick = (e) => {
+    e.preventDefault();
+    setShowPlants(true); // Set showAboutUs to true when "About Us" link is clicked
+    setShowCart(false); // Hide the cart when navigating to About Us
+};
+
+   const handleContinueShopping = (e) => {
+    e.preventDefault();
+    setShowCart(false);
+  };
 
     return (
         <div className="product-list">
