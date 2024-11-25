@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import './ProductList.css';
+import React, { useState,useEffect } from 'react';
+import './ProductList.css'
 import CartItem from './CartItem';
 
 function ProductList() {
-    const [showCart, setShowCart] = useState(false);
-    const [showPlants, setShowPlants] = useState(false); // State to control visibility of the plant categories
+    const [showCart, setShowCart] = useState(false); 
+    const [showPlants, setShowPlants] = useState(false); // State to control the visibility of the About Us page
 
     const plantsArray = [
         {
@@ -84,7 +84,7 @@ function ProductList() {
                 {
                     name: "Hyacinth",
                     image: "https://cdn.pixabay.com/photo/2019/04/07/20/20/hyacinth-4110726_1280.jpg",
-                    description: "Beautiful flowering plant known for its fragrance.",
+                    description: "Hyacinth is a beautiful flowering plant known for its fragrant.",
                     cost: "$22"
                 }
             ]
@@ -93,21 +93,21 @@ function ProductList() {
             category: "Insect Repellent Plants",
             plants: [
                 {
-                    name: "Oregano",
+                    name: "oregano",
                     image: "https://cdn.pixabay.com/photo/2015/05/30/21/20/oregano-790702_1280.jpg",
-                    description: "Contains compounds that can deter certain insects.",
+                    description: "The oregano plants contains compounds that can deter certain insects.",
                     cost: "$10"
                 },
                 {
                     name: "Marigold",
-                    image: "https://cdn.pixabay.com/photo/2022/02/22/05/45/marigold-7028063_1280.jpg",
-                    description: "Natural insect repellent, adds color to the garden.",
+                    image:"https://cdn.pixabay.com/photo/2022/02/22/05/45/marigold-7028063_1280.jpg",
+                    description: "Natural insect repellent, also adds color to the garden.",
                     cost: "$8"
                 },
                 {
                     name: "Geraniums",
                     image: "https://cdn.pixabay.com/photo/2012/04/26/21/51/flowerpot-43270_1280.jpg",
-                    description: "Insect-repelling properties with a pleasant scent.",
+                    description: "Known for their insect-repelling properties while adding a pleasant scent.",
                     cost: "$20"
                 },
                 {
@@ -177,40 +177,22 @@ function ProductList() {
                 {
                     name: "ZZ Plant",
                     image: "https://images.unsplash.com/photo-1632207691143-643e2a9a9361?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    description: "Tolerates low light and irregular watering.",
-                    cost: "$12"
-                },
-                {
-                    name: "Aloe Vera",
-                    image: "https://cdn.pixabay.com/photo/2018/04/02/07/42/leaf-3283175_1280.jpg",
-                    description: "Easy to care for, only needs occasional watering.",
-                    cost: "$14"
-                },
-                {
-                    name: "Spider Plant",
-                    image: "https://cdn.pixabay.com/photo/2018/07/11/06/47/chlorophytum-3530413_1280.jpg",
-                    description: "Thrives with minimal attention.",
-                    cost: "$12"
-                },
-                {
-                    name: "Cast Iron Plant",
-                    image: "https://cdn.pixabay.com/photo/2021/06/06/17/36/plant-6315916_1280.jpg",
-                    description: "Extremely hardy, requires little maintenance.",
-                    cost: "$15"
+                    description: "Thrives in low light and requires minimal watering.",
+                    cost: "$25"
                 },
                 {
                     name: "Pothos",
-                    image: "https://cdn.pixabay.com/photo/2020/08/14/14/16/pothos-5484642_1280.jpg",
-                    description: "Can survive in low light, minimal watering required.",
+                    image: "https://cdn.pixabay.com/photo/2018/11/15/10/32/plants-3816945_1280.jpg",
+                    description: "Tolerates neglect and can grow in various conditions.",
                     cost: "$10"
                 },
                 {
                     name: "Snake Plant",
                     image: "https://cdn.pixabay.com/photo/2021/01/22/06/04/snake-plant-5939187_1280.jpg",
-                    description: "Resilient, thrives in almost any condition.",
+                    description: "Needs infrequent watering and is resilient to most pests.",
                     cost: "$15"
-                }
-            {
+                },
+                {
                     name: "Cast Iron Plant",
                     image: "https://cdn.pixabay.com/photo/2017/02/16/18/04/cast-iron-plant-2072008_1280.jpg",
                     description: "Hardy plant that tolerates low light and neglect.",
@@ -265,7 +247,6 @@ const handlePlantsClick = (e) => {
     e.preventDefault();
     setShowCart(false);
   };
-
     return (
         <div>
              <div className="navbar" style={styleObj}>
